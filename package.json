@@ -1,0 +1,70 @@
+{
+  "name": "@jser/stacked-area-chart-data",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/jser/stacked-area-chart-data",
+  "bugs": {
+    "url": "https://github.com/jser/stacked-area-chart-data/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jser/stacked-area-chart-data.git"
+  },
+  "license": "MIT",
+  "author": "azu",
+  "sideEffects": false,
+  "main": "lib/stacked-area-chart-data.js",
+  "module": "module/stacked-area-chart-data.js",
+  "types": "lib/stacked-area-chart-data.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "module"
+  ],
+  "scripts": {
+    "main": "ts-node src/index.ts",
+    "build": "tsc -p .",
+    "clean": "rimraf lib/ module/",
+    "prepare": "git config --local core.hooksPath .githook",
+    "prepublishOnly": "npm run clean && npm run build",
+    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
+    "test": "mocha \"test/**/*.ts\"",
+    "watch": "tsc -p . --watch"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css}": [
+      "prettier --write"
+    ]
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": false,
+    "tabWidth": 4,
+    "trailingComma": "none"
+  },
+  "devDependencies": {
+    "@types/lodash.groupby": "^4.6.6",
+    "@types/mocha": "^8.2.0",
+    "@types/node": "^14.14.20",
+    "lint-staged": "^10.5.3",
+    "mocha": "^8.2.1",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.1.1",
+    "ts-node-test-register": "^9.0.1",
+    "typescript": "^4.1.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@jser/data-fetcher": "^1.1.6",
+    "@jser/stat": "^1.1.6",
+    "dayjs": "^1.10.3",
+    "lodash.groupby": "^4.6.0"
+  }
+}
