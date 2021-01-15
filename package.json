@@ -26,7 +26,8 @@
     "module"
   ],
   "scripts": {
-    "main": "ts-node src/index.ts",
+    "post": "ts-node src/post.ts",
+    "item": "ts-node src/item.ts",
     "build": "tsc -p .",
     "clean": "rimraf lib/ module/",
     "prepare": "git config --local core.hooksPath .githook",

@@ -6,8 +6,15 @@ https://docs.google.com/spreadsheets/d/1Sr2-_eEXD7BD4Y5cpaJ3y6T1hMqULEdPhUlwULow
 
 ## Usage
 
+post
+
     yarn install
-    npm run main
+    npm run post
+
+item 
+
+    yarn install
+    npm run item
 
 ## Changelog
 
